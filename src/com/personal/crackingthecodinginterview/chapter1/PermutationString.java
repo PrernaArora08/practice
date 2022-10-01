@@ -3,7 +3,7 @@ package com.personal.crackingthecodinginterview.chapter1;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class PalindromeString {
+public class PermutationString {
     private StringBuffer mainString = new StringBuffer();
     private StringBuffer testString = new StringBuffer();
     HashMap<Integer,Integer> charCount = new HashMap<>();
@@ -18,7 +18,7 @@ public class PalindromeString {
         testString.append(sc.nextLine());
         return testString;
     }
-    public boolean checkIfPalindrome(){
+    public boolean checkIfPermutation(){
         getMainString();
         getTestString();
         if(mainString.length() == testString.length()){
