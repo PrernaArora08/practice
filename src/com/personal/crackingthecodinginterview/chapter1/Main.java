@@ -11,7 +11,10 @@ public class Main {
                 " 4. Urlify the String\n" +
                 " 5. Is permutation palindrome\n" +
                 " 6. one way edit\n" +
-                " 7. Compress String\n"
+                " 7. Compress String\n" +
+                " 8. Matrix rotation by 90\n" +
+                " 9. Zero Matrix\n" +
+                " 10. Is Rotation"
         );
         Scanner sc = new Scanner(System.in);
         Integer choice = sc.nextInt();
@@ -51,6 +54,31 @@ public class Main {
             StringCompression stringCompression = new StringCompression();
             StringBuffer output = stringCompression.compress();
             System.out.println(output);
+        }
+        else if(choice == 8){
+            MatrixRotation mr = new MatrixRotation();
+            Integer[][] matrixRotated = mr.rotationArray();
+            for(int i = 0; i< matrixRotated.length; i++){
+                for (int j = 0; j < matrixRotated.length; j++){
+                    System.out.print(matrixRotated[i][j] + " ");
+                }
+                System.out.print("\n");
+            }
+        }
+        else if (choice ==9){
+            ZeroMatrix zm = new ZeroMatrix();
+            Integer[][] zeroMatrixOp = zm.zeroMatrix();
+            for(int i = 0; i< zeroMatrixOp.length; i++){
+                for (int j = 0; j < zeroMatrixOp.length; j++){
+                    System.out.print(zeroMatrixOp[i][j] + " ");
+                }
+                System.out.print("\n");
+            }
+        }
+        else if(choice == 10){
+            IsRotation ir = new IsRotation();
+            Boolean isRot = ir.ifRotation();
+            System.out.println(isRot);
         }
         else
             System.out.println(("Please enter a valid choice"));
